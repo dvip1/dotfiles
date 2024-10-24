@@ -1,0 +1,29 @@
+# Ignore all compiled output or temp files
+*.swp
+*.swo
+*.tmp
+*.bak
+*.log
+
+# Ignore compiled Lua files (if any get generated)
+*.luac
+
+# Ignore packer compiled output for Neovim
+nvim/.config/nvim/plugin/packer_compiled.lua
+
+# Ignore system-specific or temporary files
+.DS_Store
+Thumbs.db
+
+
+# Ignore Waybar cache or lock files if created
+waybar/.config/waybar/.lock
+waybar/.config/waybar/.cache
+
+# Ignore system backup files
+*.old
+*.orig
+
+# Ignore secret files (adjust this depending on what secrets you have)
+*.secret
+
