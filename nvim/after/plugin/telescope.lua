@@ -1,16 +1,21 @@
 local telescope = require('telescope')
 
 telescope.setup({
-    defaults = {
-        follow = true,  -- Follow symbolic links
-        hidden = true,  -- Show hidden files
-    },
     pickers = {
         find_files = {
             follow = true,
             hidden = true
         }
+    }, 
+      extensions = {
+    media_files = {
+      -- filetypes whitelist
+      -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+      filetypes = {"png", "webp", "jpg", "jpeg"},
+      -- find command (defaults to `fd`)
+      find_cmd = "rg"
     }
+  }
 })
 
 local builtin = require('telescope.builtin')
